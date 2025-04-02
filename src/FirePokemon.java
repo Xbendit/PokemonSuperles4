@@ -1,15 +1,17 @@
 package src;
 
-public class FirePokemon extends Pokemon {
+public class FirePokemon extends Pokemon implements DoubleType {
     private Integer hp;
     private Integer xp;
+    private String secondType;
 
 
 
-    public FirePokemon(String name, Integer level, Integer hp, Integer xp) {
+    public FirePokemon(String name, Integer level, Integer hp, Integer xp, String secondType) {
         super(name, level);
         this.hp = hp;
         this.xp = xp;
+        this.secondType = secondType;
     }
 
     @Override
@@ -46,5 +48,11 @@ public class FirePokemon extends Pokemon {
 
     public void setXp(Integer xp) {
         this.xp = xp;
+    }
+
+    @Override
+    public String getSecondType() {
+        System.out.println(secondType);
+        return "";
     }
 }

@@ -1,13 +1,16 @@
 package src;
 
-public class WaterPokemon extends Pokemon{
+public class WaterPokemon extends Pokemon implements DoubleType{
     private Integer height;
     private String food;
+    private String secondType;
 
-    public WaterPokemon(String name, Integer level, Integer height, String food) {
+
+    public WaterPokemon(String name, Integer level, Integer height, String food, String secondType) {
         super(name, level);
         this.height = height;
         this.food = food;
+        this.secondType = secondType;
     }
 
     @Override
@@ -44,5 +47,10 @@ public class WaterPokemon extends Pokemon{
 
     public void setFood(String food) {
         this.food = food;
+    }
+
+    @Override
+    public String getSecondType() {
+        return secondType;
     }
 }
